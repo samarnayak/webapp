@@ -1,2 +1,0 @@
-jbr/spring/boot/UserRegistrationLoginApplicationTests.java
- jbr.spring.boot.UserRegistrationLoginApplicationTests
