@@ -1,0 +1,16 @@
+jbr/spring/boot/dao/DBHandler.java
+ jbr.spring.boot.dao.DBHandler
+jbr/spring/boot/model/Registration.java
+ jbr.spring.boot.model.Registration
+jbr/spring/boot/model/Login.java
+ jbr.spring.boot.model.Login
+jbr/spring/boot/UserRegistrationLoginApplication.java
+ jbr.spring.boot.UserRegistrationLoginApplication
+jbr/spring/boot/model/User.java
+ jbr.spring.boot.model.User
+jbr/spring/boot/controller/LoginController.java
+ jbr.spring.boot.controller.LoginController
+jbr/spring/boot/controller/RegistrationController.java
+ jbr.spring.boot.controller.RegistrationController
+jbr/spring/boot/controller/HomeController.java
+ jbr.spring.boot.controller.HomeController
