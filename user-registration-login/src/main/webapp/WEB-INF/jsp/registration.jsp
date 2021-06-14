@@ -8,6 +8,8 @@
 </head>
 <body>
   <form:form id="regForm" modelAttribute="user" action="registrationProcess" method="POST">
+  
+   <p>${errormessage}</p>
 
     <table align="center">
       <tr>

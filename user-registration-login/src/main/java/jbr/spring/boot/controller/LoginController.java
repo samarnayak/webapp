@@ -27,10 +27,10 @@ public class LoginController {
 		// User user = userService.validateUser(login);
 		User user = new User();
 
-		boolean isValidUser = false;
+		boolean isValidUser = true;
 		
-		String sql = "select username from springboot.user "
-				+ "where username='" + login.getUsername() + "' and password='" + login.getPassword() + "'";
+		String sql = "select userid from springboot.user "
+				+ "where userid='" + login.getUsername() + "' and password='" + login.getPassword() + "'";
 		
 		List<Map<String, Object>> result = dBHandler.select(sql, null);
 		
@@ -38,15 +38,19 @@ public class LoginController {
 		
 		if(result == null) {
 			model.addAttribute("errormessage", "username/password not correct");
+			isValidUser = false;
+
 			return "login";
+			
 		}
 		if (result.isEmpty() == true) {
 			model.addAttribute("errormessage", "username/password not correct");
+			isValidUser = false;
+
 			return "login";
 		}
-		isValidUser = true;
 		
-		model.addAttribute("username", login.getUsername());
+		model.addAttribute("userid", login.getUsername());
 		model.addAttribute("password", login.getPassword());
 
 		return isValidUser ? "welcome" : "login";

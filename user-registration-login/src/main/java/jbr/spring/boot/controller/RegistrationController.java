@@ -21,15 +21,31 @@ public class RegistrationController {
 
 	@PostMapping(value = "/registrationProcess")
 	public String addUser(@ModelAttribute("user") User user, ModelMap model) {
+		boolean newUser=true;
 
-		String sql = "INSERT INTO springboot.user "
-				+ "(username,password,firstname,lastname,email,address,phone) values('" + user.getUsername() + "','"
+		String sql = "INSERT INTO springboot.userdetails "
+				+ "(userid,password,firstname,lastname,email,address,phone) values('" + user.getUsername() + "','"
 				+ user.getPassword() + "','" + user.getFirstname() + "','" + user.getLastname() + "','"
 				+ user.getEmail() + "','" + user.getAddress() + "','" + user.getPhone() + "')";
+		String sql1 = "INSERT INTO springboot.user "
+				+"(userid,password,firstname) values('" + user.getUsername()+ "','" +user.getPassword()+ "','" +user.getFirstname() + "')";
+		
+		int result1 = dBHandler.insertOrUpdate(sql1, null);
 		int result = dBHandler.insertOrUpdate(sql, null);
-		model.addAttribute("username", user.getUsername());
+		
+		System.out.println(result);
+		
+		if(result != 1) {
+			model.addAttribute("errormessage", "user ID Already exists/ Try anather one");
+			newUser = false;
+
+			return "registration";
+		}
+		
+		model.addAttribute("userid", user.getUsername());
 		model.addAttribute("address", user.getAddress());
 
-		return result == 0 ? "registration" : "success";
+		return newUser ? "success" : "registration";
+
 	}
 }

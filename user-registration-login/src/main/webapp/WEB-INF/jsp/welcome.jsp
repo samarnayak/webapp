@@ -5,7 +5,7 @@
 <meta charset="ISO-8859-1">
 <title>Welcome</title>
 </head>
-<body>Welcome ${username}
+<body>Welcome ${userid}
 </br>
 I know your password : ${password}
 </body>
