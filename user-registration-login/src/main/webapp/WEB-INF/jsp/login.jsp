@@ -65,10 +65,11 @@
       </div>
       <!-- <button type="submit" onClick="return false;">Log in</button> -->
       <form:button id="login" name="login">Login</form:button>
-      <a href="https://codepen.io/elujambio/pen/yjwzGP" class="discrete" target="_blank">Basic version</a>
+      <a href="/">Home</a></td>
 <!--    </form> -->
     </form:form>
   </div>
+  
 </body>
 <!-- partial -->
   

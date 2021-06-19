@@ -16,7 +16,11 @@ public class HomeController {
   public String home(Map<String, Object> map) {
     return "home";
   }
+  @GetMapping("/showTestpage")
+  public String showTestpage(ModelMap model) {
 
+    return "testpage";
+  }
   @GetMapping("/showLoginPage")
   public String showLoginPage(ModelMap model) {
     model.addAttribute(new Login());

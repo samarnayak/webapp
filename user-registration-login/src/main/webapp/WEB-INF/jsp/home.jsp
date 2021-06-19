@@ -8,5 +8,6 @@
 <body>
   <a href="showLoginPage">Login</a>
   <a href="showRegistrationPage">Registration</a>
+  <a href="showTestpage">Test<a/>
 </body>
 </html>
