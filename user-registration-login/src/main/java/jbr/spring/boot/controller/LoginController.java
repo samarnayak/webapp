@@ -50,8 +50,16 @@ public class LoginController {
 			return "login";
 		}
 		
+		//get data from sql
+		String sql2="select phone from springboot.userdetails" 
+				+" where userid ='" + login.getUsername()+"'";
+		List<Map<String,Object>> details= dBHandler.select(sql2, null);
+		String phone_no_str = details.get(0).get("phone").toString();
+		
+		
 		model.addAttribute("userid", login.getUsername());
 		model.addAttribute("password", login.getPassword());
+		model.addAttribute("sqlop" , phone_no_str);
 
 		return isValidUser ? "welcome" : "login";
 	}

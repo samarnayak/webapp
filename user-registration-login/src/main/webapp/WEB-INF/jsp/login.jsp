@@ -65,7 +65,11 @@
       </div>
       <!-- <button type="submit" onClick="return false;">Log in</button> -->
       <form:button id="login" name="login">Login</form:button>
+<<<<<<< Updated upstream
       <a href="/">Home</a></td>
+=======
+      <a href="/" class="discrete" target="_blank">Home</a>
+>>>>>>> Stashed changes
 <!--    </form> -->
     </form:form>
   </div>
