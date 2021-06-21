@@ -5,7 +5,7 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 </head>
-<body>
+<body style="background-color:grey;">
   <a href="showLoginPage">Login</a>
   <a href="showRegistrationPage">Registration</a>
   <a href="showTestpage">Test<a/>

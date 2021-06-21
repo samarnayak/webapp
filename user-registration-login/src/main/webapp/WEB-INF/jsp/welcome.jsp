@@ -45,9 +45,6 @@ From sql : ${sqlop}
         <td><form:input path="phone" name="phone" id="phone" /></td>
       </tr>
 
-      <tr>
-        <td></td>
-        <td><form:button id="register" name="register">Register</form:button></td>
       </tr>
       <tr></tr>
       <tr>
