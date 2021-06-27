@@ -1,51 +1,68 @@
+
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style><%@include file="/WEB-INF/css/style_home.css"%></style>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
 </head>
-<body>
-  <form:form id="regForm" modelAttribute="user" action="registrationProcess" method="POST">
-  
-   <p>${errormessage}</p>
+<body class="login_box">
+  <h3 style="color: white;padding: 10px 20px;
+  height: 100%;
+  width: 100%;">Enter Details</h3>
+    <body>
+      <form:form id="regForm" modelAttribute="user" action="registrationProcess" method="POST">
 
-    <table align="center">
+        <p>${errormessage}</p>
+
+        <!--<form modelAttribute="user" action="registrationProcess" method="POST">-->
+        
+          <table align="center">
       <tr>
-        <td><form:label path="username">Username</form:label></td>
-        <td><form:input path="username" name="username" id="username" /></td>
+        <td><form:label class="login-item" path="username">Username</form:label></td>
+        <td><form:input class="login-item" path="username" name="username" id="username" /></td>
         <td><form:errors path="username" /></td>
       </tr>
       <tr>
-        <td><form:label path="password">Password</form:label></td>
-        <td><form:password path="password" name="password" id="password" /></td>
+        <td><form:label class="login-item" path="password">Password</form:label></td>
+        <td><form:password class="login-item" path="password" name="password" id="password" /></td>
         <td><form:errors path="password" /></td>
       </tr>
       <tr>
-        <td><form:label path="firstname">FirstName</form:label></td>
-        <td><form:input path="firstname" name="firstname" id="firstname" /></td>
+        <td><form:label class="login-item"  path="firstname">FirstName</form:label></td>
+        <td><form:input class="login-item" path="firstname" name="firstname" id="firstname" /></td>
       </tr>
       <tr>
-        <td><form:label path="lastname">LastName</form:label></td>
-        <td><form:input path="lastname" name="lastname" id="lastname" /></td>
+        <td><form:label class="login-item"  path="lastname">LastName</form:label></td>
+        <td><form:input class="login-item" path="lastname" name="lastname" id="lastname" /></td>
       </tr>
       <tr>
-        <td><form:label path="email">Email</form:label></td>
-        <td><form:input path="email" name="email" id="email" /></td>
+        <td><form:label class="login-item" path="email">Email</form:label></td>
+        <td><form:input class="login-item" path="email" name="email" id="email" /></td>
       </tr>
       <tr>
-        <td><form:label path="address">Address</form:label></td>
-        <td><form:input path="address" name="address" id="address" /></td>
+        <td><form:label class="login-item" path="address">Address</form:label></td>
+        <td><form:input class="login-item" path="address" name="address" id="address" /></td>
       </tr>
       <tr>
-        <td><form:label path="phone">Phone</form:label></td>
-        <td><form:input path="phone" name="phone" id="phone" /></td>
+        <td><form:label class="login-item" path="phone">Phone</form:label></td>
+        <td><form:input class="login-item" path="phone" name="phone" id="phone" /></td>
       </tr>
 
       <tr>
         <td></td>
-        <td><form:button id="register" name="register">Register</form:button></td>
+        <td><form:button id="register" class="login-item" name="register">Register</form:button></td>
       </tr>
       <tr></tr>
       <tr>
@@ -53,7 +70,8 @@
         <td><a href="/">Home</a></td>
       </tr>
     </table>
-  </form:form>
-
+        </form:form>
+      
+      </body>
 </body>
 </html>
