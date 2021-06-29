@@ -1,14 +1,26 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Welcome</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+    <style><%@include file="/WEB-INF/css/style_home.css"%></style>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
 </head>
-<body>Welcome ${userid}
-</br>
+<body>
+  </br> 
+<h3 color=rgba (125,255,255,255) >Welcome ${userid}</h3>
+</br align="center">
 I know your password : ${password}
-</br>
+</br align="center">
 From sql : ${sqlop}
   
 
@@ -19,33 +31,7 @@ From sql : ${sqlop}
         <td>${sqlop}</td>
         <td><form:errors path="username" /></td>
       </tr>
-      <tr>
-        <td><form:label path="password">Password</form:label></td>
-        <td><form:password path="password" name="password" id="password" /></td>
-        <td><form:errors path="password" /></td>
-      </tr>
-      <tr>
-        <td><form:label path="firstname">FirstName</form:label></td>
-        <td><form:input path="firstname" name="firstname" id="firstname" /></td>
-      </tr>
-      <tr>
-        <td><form:label path="lastname">LastName</form:label></td>
-        <td><form:input path="lastname" name="lastname" id="lastname" /></td>
-      </tr>
-      <tr>
-        <td><form:label path="email">Email</form:label></td>
-        <td><form:input path="email" name="email" id="email" /></td>
-      </tr>
-      <tr>
-        <td><form:label path="address">Address</form:label></td>
-        <td><form:input path="address" name="address" id="address" /></td>
-      </tr>
-      <tr>
-        <td><form:label path="phone">Phone</form:label></td>
-        <td><form:input path="phone" name="phone" id="phone" /></td>
-      </tr>
-
-      </tr>
+      
       <tr></tr>
       <tr>
         <td></td>

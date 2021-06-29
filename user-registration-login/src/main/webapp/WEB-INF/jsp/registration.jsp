@@ -24,14 +24,17 @@
     <body>
       <form:form id="regForm" modelAttribute="user" action="registrationProcess" method="POST">
 
-        <p>${errormessage}</p>
+        
 
         <!--<form modelAttribute="user" action="registrationProcess" method="POST">-->
         
           <table align="center">
+          <tr>
+          <p>${errormessage}</p>
+          </tr>
       <tr>
         <td><form:label class="login-item" path="username">Username</form:label></td>
-        <td><form:input class="login-item" path="username" name="username" id="username" /></td>
+        <td><form:input class="login-item" path="username" name="username" id="username" required="true" /></td>
         <td><form:errors path="username" /></td>
       </tr>
       <tr>
@@ -62,7 +65,7 @@
 
       <tr>
         <td></td>
-        <td><form:button id="register" class="login-item" name="register">Register</form:button></td>
+        <td><form:button id="register" class="login-btn" name="register">Register</form:button></td>
       </tr>
       <tr></tr>
       <tr>
