@@ -22,6 +22,7 @@
   height: 100%;
   width: 100%;">Enter Details</h3>
     <body>
+      <font size="8" face="verdana" color="red"><h3>${errormessage}</h3></font>
       <form:form id="regForm" modelAttribute="user" action="registrationProcess" method="POST">
 
         

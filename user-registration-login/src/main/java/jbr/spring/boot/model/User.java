@@ -8,14 +8,14 @@ public class User {
 	private String lastname;
 	private String email;
 	private String address;
-	private int phone;
+	private String phone;
 
 	public User() {
 		super();
 	}
 
 	public User(String username, String password, String firstname, String lastname, String email, String address,
-			int phone) {
+			String phone) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -74,11 +74,11 @@ public class User {
 		this.address = address;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -97,7 +97,7 @@ public class User {
 		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
 		result = prime * result + ((lastname == null) ? 0 : lastname.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + phone;
+		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
@@ -136,7 +136,10 @@ public class User {
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (phone != other.phone)
+		if (phone == null) {
+			if (other.phone != null)
+				return false;
+		} else if (!phone.equals(other.phone))
 			return false;
 		if (username == null) {
 			if (other.username != null)
@@ -145,8 +148,4 @@ public class User {
 			return false;
 		return true;
 	}
-	
-	
-	
-
 }

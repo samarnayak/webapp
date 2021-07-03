@@ -51,7 +51,7 @@ public class LoginController {
 		}
 		
 		//get data from sql
-		String sql2="select phone from springboot.userdetails" 
+		String sql2="select phone from springboot.user" 
 				+" where userid ='" + login.getUsername()+"'";
 		List<Map<String,Object>> details= dBHandler.select(sql2, null);
 		String phone_no_str = details.get(0).get("phone").toString();

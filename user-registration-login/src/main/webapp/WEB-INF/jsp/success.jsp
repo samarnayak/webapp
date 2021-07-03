@@ -1,6 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,8 +18,8 @@
 <body class="login_box" >
 </br>
 
-<h3 color="red">Welcome ${userid}</h3>
+<font size="14" face="verdana" color="white"><h3>Welcome ${userid}</h3></font>
 </br>
-You are at : ${address}
+<font color="white"> <p> You are at : ${address} </p></font>
 </body>
 </html>

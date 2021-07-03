@@ -17,18 +17,24 @@ public class DBHandler {
 	
 	public int insertOrUpdate(String sql, SqlParameterSource sqlParameterSource) {
 		try {
+			System.out.println("Executiong the query: " + sql);
 			return new NamedParameterJdbcTemplate(this.jdbcTemplate).update(sql, sqlParameterSource);
 		}
 		catch(Exception ex) {
-			return -999;
+			System.err.println(ex.getMessage());
+			ex.printStackTrace();
+			throw ex;
 		}
 	}
 	
 	public List<Map<String, Object>> select(String sql, SqlParameterSource sqlParameterSource) {
 		try {
+			System.out.println("Executiong the query: " + sql);
 			return new NamedParameterJdbcTemplate(this.jdbcTemplate).queryForList(sql, sqlParameterSource);
 		}
 		catch(Exception ex) {
+			System.err.println(ex.getMessage());
+			ex.printStackTrace();
 			return null;
 		}
 	}
