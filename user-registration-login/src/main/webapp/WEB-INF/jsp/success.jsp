@@ -21,5 +21,9 @@
 <font size="14" face="verdana" color="white"><h3>Welcome ${userid}</h3></font>
 </br>
 <font color="white"> <p> You are at : ${address} </p></font>
+
+<div>
+<font color="white"></font><a href="/">Home</a>
+</div>
 </body>
 </html>

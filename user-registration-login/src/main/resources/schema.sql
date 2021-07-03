@@ -2,7 +2,7 @@
  * Create database first (run manually)
  *CREATE DATABSE IF NOT EXISTS springboot;
  */
-DROP TABLE IF EXISTS springboot.user;
+/*DROP TABLE IF EXISTS springboot.user;*/
 
 
 CREATE TABLE IF NOT EXISTS springboot.user (
