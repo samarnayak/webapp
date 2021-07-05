@@ -16,7 +16,7 @@
     />
 </head>
 <body class="login_box">
-    
+    <font color="white"><p>${errormessage}</p></font>
 
     <div >
         <form:form method="post" id="loginForm" modelAttribute="login" action="loginProcess" >
@@ -59,7 +59,7 @@
                 </tr>
             </table>
             <div>
-                <!-- <button type="submit" class="login-btn">Signin</button> -->
+                
                 <form:button id="login" name="login" class="login-btn">Signin</form:button>
             </div>
         </form:form>

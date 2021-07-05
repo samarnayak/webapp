@@ -30,7 +30,7 @@
         
           <table align="center">
           <tr>
-          <p>${errormessage}</p>
+         <font color="white"> <p>${errormessage}</p></font>
           </tr>
       <tr>
         <td><form:label class="login-item" path="username">Username</form:label></td>

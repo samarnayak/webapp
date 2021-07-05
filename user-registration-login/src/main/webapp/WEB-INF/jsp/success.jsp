@@ -18,8 +18,13 @@
 <body class="login_box" >
 </br>
 
-<h3 color="red">Welcome ${userid}</h3>
+<font color="white"><h3>Welcome ${userid}</h3></font>
 </br>
-You are at : ${address}
+<font color="white">You are at : ${address}</font>
+
+
+<div class="login-item">
+<a href="/">Home</a>
+</div>
 </body>
 </html>

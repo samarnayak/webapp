@@ -15,20 +15,20 @@
       crossorigin="anonymous"
     />
 </head>
-<body>
+<body class=login_box >
   </br> 
-<h3 color=rgba (125,255,255,255) >Welcome ${userid}</h3>
+<h3 style="color:white">Welcome ${userid}</h3>
+</br  align="center">
+<p style="color:white">I know your password : ${password}</p>
 </br align="center">
-I know your password : ${password}
-</br align="center">
-From sql : ${sqlop}
+<p style="color:white">From sql : ${sqlop}</p>
   
 
 
     <table align="center">
       <tr>
-        <td>Username</td>
-        <td>${sqlop}</td>
+        <td><p style="color:white">Username</p></td>
+        <td><p style="color:white">${sqlop}</p></td>
         <td><form:errors path="username" /></td>
       </tr>
       
